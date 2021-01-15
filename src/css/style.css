@@ -1236,12 +1236,12 @@ width: 100%;
 	}
   
   .main {
-  margin-top:50px;
+  margin-top:200px;
   }
 
   .slideshow-container{
     position: relative;
-    margin-top: 180px;
+    margin-top: 10px;
   }
   
   .prev, .next{
@@ -1256,7 +1256,7 @@ width: 100%;
   }
 
   .imgtext{
-    margin-top: -190px;
+    margin-top: 155px;
     overflow: hidden;
   }
 
