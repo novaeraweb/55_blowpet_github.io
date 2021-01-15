@@ -1219,15 +1219,12 @@ width: 100%;
 	}
 	.excluir img {
     margin-left: 50px;
-margin-top: 37px;
+    margin-top: 37px;
   }
 	 #nav.closed {
 		display: none;
 	}
-.skdslider {
-    height: 300px;
-    max-width: 100%;
-}
+
 	#menu {
 		display: block;
 		float: right;
@@ -1237,10 +1234,33 @@ margin-top: 37px;
 	#menu img {
 		margin-top: 105%;
 	}
-.main {
-  margin-top:0;
-}
-	nav li { 
+  
+  .main {
+  margin-top:50px;
+  }
+
+  .slideshow-container{
+    position: relative;
+    margin-top: 180px;
+  }
+  
+  .prev, .next{
+    position: absolute;
+    top: 60px;
+    height: 10%;
+  }
+
+  .numbertext{
+    position: absolute;
+    top: 110px;
+  }
+
+  .imgtext{
+    margin-top: -190px;
+    overflow: hidden;
+  }
+
+  nav li { 
 		width: 100%!important; 
 		margin: 0!important; 
 		text-align: left;
@@ -1294,15 +1314,6 @@ margin-top: 37px;
 	    margin-left:0px;
       margin-top:-41px;
 	}
-	.skdslider {
-	    height: 330px;
-	}
-  .skdslider ul.slide-navs {
-    bottom: 40%;
-  }
-  .skdslider a.prev,  .skdslider a.next {
-    bottom: 58%;
-  }
 	.formulario {
 		width: 94%;
 		margin-top: 200px;
@@ -1393,10 +1404,6 @@ video {
   margin-top: 40px;
 }
 
-.skdslider .slide-desc {
-  top:52%;
-  width: 100%;
-}
 .texto {
   font-size:1em;
   line-height:40px;

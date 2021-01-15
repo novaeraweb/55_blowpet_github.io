@@ -69,7 +69,7 @@
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 <?php require "header.php" ?>
-<div class="grid_10"><?php require "alerta.php" ?>
+<div class="grid_10">
   <div class="slideshow-container">
       <div class="mySlides fade">
         <div class="imgtext">
@@ -79,7 +79,7 @@
         <div class="numbertext">1/4</div>
             <picture>
               <source media="(min-width:401px)" srcset="images/embalagens-plasticas.jpg" alt="Frascos Pet Plástico - Botucatu/SP">
-              <source media="(max-width:400px)" srcset="images/banner02-mobile.jpg" alt="Frascos Pet Plástico - Botucatu/SP">
+              <source media="(max-width:400px)" srcset="images/embalagens-plasticas.jpg" alt="Frascos Pet Plástico - Botucatu/SP">
               <img src="images/banner02.jpg" alt="Frascos Pet Plástico - Botucatu/SP" />
             </picture> 
       </div>
@@ -92,7 +92,7 @@
         <div class="numbertext">2/4</div>
           <picture>
             <source media="(min-width:401px)" srcset="images/home-preformas.jpg" alt="BlowPet - Botucatu/SP">
-            <source media="(max-width:400px)" srcset="images/banner01-mobile.jpg" alt="BlowPet - Botucatu/SP">
+            <source media="(max-width:400px)" srcset="images/home-preformas.jpg" alt="BlowPet - Botucatu/SP">
             <img src="images/home-preformas.jpg" alt="BlowPet - Botucatu/SP" />
           </picture>
       </div> 
@@ -105,7 +105,7 @@
         <div class="numbertext">3/4</div>
           <picture>
             <source media="(min-width:401px)" srcset="images/home-empresa.jpg" alt="BlowPet - Botucatu/SP">
-            <source media="(max-width:400px)" srcset="images/banner01-mobile.jpg" alt="BlowPet - Botucatu/SP">
+            <source media="(max-width:400px)" srcset="images/home-empresa.jpg" alt="BlowPet - Botucatu/SP">
             <img src="images/home-empresa.jpg" alt="BlowPet - Botucatu/SP" />
           </picture>
       </div>
@@ -118,7 +118,7 @@
         <div class="numbertext">4/4</div>
           <picture>
             <source media="(min-width:401px)" srcset="images/home-projeto-personalizado.jpg" alt="BlowPet - Botucatu/SP">
-            <source media="(max-width:400px)" srcset="images/banner01-mobile.jpg" alt="BlowPet - Botucatu/SP">
+            <source media="(max-width:400px)" srcset="images/home-projeto-personalizado.jpg" alt="BlowPet - Botucatu/SP">
             <img src="images/home-projeto-personalizado.jpg" alt="BlowPet - Botucatu/SP" />
           </picture>
       </div> 
@@ -178,8 +178,9 @@
           <p><a href="preformas-pet-blowpet.php" class="botao2" style="padding:1%;"><img src="images/icon-list.svg"  width="4%" alt="Email Blowpet" style="margin-right: 5px;"> Orçamento Preformas pet</a></p>
           <p><a href="rotulagem-pet-blowpet.php" class="botao2" style="padding:1%;"><img src="images/icon-list.svg"  width="4%" alt="Email Blowpet" style="margin-right: 5px;"> Orçamento Rotulagem</a></p>
         </div>
-        <div class="grid_6">
+        <div class="grid_6" id="contato">        
           <form action="phpmailer/enviar.php" method="post" name="form" class="form-contato">
+          <?php require_once "alerta.php"?>
               <p>Fale Conosco</p>
             <div class="grid_55"><input type="text" name="nome" placeholder="Nome *"required></div>
             <div class="grid_55"><input type="email" name="email" placeholder="Email *" required></div>

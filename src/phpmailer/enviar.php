@@ -13,6 +13,24 @@ $secret_key = '6LdDoiwaAAAAAEoK81f9eyUeZXrDXYGvF1U4nL2f';
 //Pego a validação do Captcha feita pelo usuário
 $recaptcha_response = $_POST['g-recaptcha-response'];
 
+// Definindo as variáveis de redirecionamento de página
+if (isset($_POST['btn-contato'])) {
+  $pagina = $_POST['pagina'];
+}
+
+if (isset($_POST['btn-rotulagem'])) {
+  $pagina = $_POST['pagina'];
+}
+
+if (isset($_POST['btn-trabalhe'])) {
+  $pagina = $_POST['pagina'];
+}
+
+if (isset($_POST['btn-projeto-personalizado'])) {
+  $pagina = $_POST['pagina'];
+}
+
+
 // Verifico se foi feita a postagem do Captcha 
 if(isset($recaptcha_response)){
         
@@ -49,7 +67,6 @@ if(isset($recaptcha_response)){
         $cidade = $_POST['cidade'];
         $quantidade = $_POST['quantidade'];
         $mensagem = $_POST['mensagem'];
-        $pagina = "rotulagem-pet-blowpet.php";
       }
       if (isset($_POST['btn-trabalhe'])) {
         $nome = $_POST['nome'];
@@ -61,7 +78,6 @@ if(isset($recaptcha_response)){
         if (isset($_FILES['arquivo'])) {
         $arquivo = $_FILES['arquivo'];
         }
-        $pagina = 'blowpet-trabalhe-conosco.php';
       }
 
       if (isset($_POST['btn-projeto-personalizado'])) {
@@ -73,7 +89,6 @@ if(isset($recaptcha_response)){
         if (isset($_FILES['arquivo'])) {
         $arquivo = $_FILES['arquivo'];
         }
-        $pagina = 'blowpet-fale-conosco.php';
       }
 
       // Define os dados do servidor e tipo de conexão
@@ -227,6 +242,6 @@ if(isset($recaptcha_response)){
   // Caso o Captcha não tenha sido validado 
       //retorno uma mensagem de erro. 
       else {
-          header("Location: ../$pagina?confirma=true");
+          header("Location: ../".$pagina."?confirma=true#contato");
       }
   }

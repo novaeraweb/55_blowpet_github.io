@@ -81,9 +81,9 @@ $produtos = listaProdutos($blowpet);
           <h2 style="padding-top:60px">Trabalhe Conosco</h2><br>
           <p>Preencha os dados abaixo e anexe o arquivo do seu currículo.</p>
         </div>
-        <div class="grid_6">
+        <div class="grid_6" id="contato">
           <form action="phpmailer/enviar.php" method="post" enctype="multipart/form-data" name="form" class="form-contato">
-
+          <?php require_once "alerta.php"?>
             <div class="grid_55"><input type="text" name="nome" placeholder="Nome *"required></div>
             <div class="grid_55"><input type="text" name="email" placeholder="Email *" required></div>
             <div class="grid_55"><input type="text" name="telefone" placeholder="Tel/WhatsApp *" onkeypress="MascaraTelefone(form.telefone)" maxlength="15" required></div>
@@ -109,6 +109,7 @@ $produtos = listaProdutos($blowpet);
             <textarea type="text" name="mensagem" cols="30" rows="6" placeholder="Mensagem *" style="padding: 2%;"></textarea>
             <label for="">Anexar arquivo do currículo (.doc ou .pdf)</label><br><hr>
             <input type="file" name="arquivo" value="NULL">
+            <input type="hidden" name="pagina" value="blowpet-trabalhe-conosco.php">
             <div class="g-recaptcha" data-sitekey="6LdDoiwaAAAAABHGz9fSpZkKkRY8DNvor7wio_8c"></div>
             <button type="submit" name="btn-trabalhe" style="margin-left: 0;">Enviar</button>
             <p style="font-weight: 200; font-size:0.9em;">* campos obrigatórios</p>

@@ -90,8 +90,9 @@ $preformas = listaPreformas($blowpet);
     <h2>Rotulagem Termoencolhível</h2><br>
     <p>A rotulagem termoencolhível consiste em um forno e a aderência do rótulo se dá através do calor, dispensando o uso de cola e permitindo que a embalagem seja envolta por completo com o rótulo, ampliando a área para comunicação.</p>
   </div>
-  <div class="container">
+  <div class="container" id="contato">
           <form action="phpmailer/enviar.php" method="post" name="form" class="form-contato">
+          <?php require_once "alerta.php"?>
               <h3>Solicite um Orçamento para Rotulagem</h3><br>
             <div class="grid_55"><input type="text" name="nome" placeholder="Nome *"required></div>
             <div class="grid_55"><input type="text" name="email" placeholder="Email *" required></div>
@@ -102,6 +103,7 @@ $preformas = listaPreformas($blowpet);
             <input type="number" id="quantidade" name="quantidade" min="0" max="100000" step="500" value="1000" ><br><br></div>
             <textarea type="text" name="" id="" cols="30" rows="10" placeholder="Conte-nos um pouco mais sobre seus produtos e sua demanda *" style="padding:2%;"></textarea>
             <div class="g-recaptcha" data-sitekey="6LdDoiwaAAAAABHGz9fSpZkKkRY8DNvor7wio_8c"></div>
+            <input type="hidden" name="pagina" value="rotulagem-pet-blowpet.php">
             <button type="submit" name="btn-rotulagem">Enviar</button>
             <p style="font-weight: 200; font-size:0.9em;">* campos obrigatórios</p>
           </form>

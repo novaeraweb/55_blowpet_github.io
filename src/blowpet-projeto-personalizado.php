@@ -80,9 +80,9 @@ $produtos = listaProdutos($blowpet);
           <h2 style="padding-top:60px">Projetos Personalizados</h2><br>
           <p>Preencha os dados e anexe o arquivo do seu projeto.</p>
         </div>
-        <div class="grid_6">
+        <div class="grid_6" id="contato">
           <form action="phpmailer/enviar.php" method="post" name="form" class="form-contato">
-
+          <?php require_once "alerta.php"?>
             <div class="grid_55"><input type="text" name="nome" placeholder="Nome *"required></div>
             <div class="grid_55"><input type="text" name="email" placeholder="Email *" required></div>
             <div class="grid_55"><input type="text" name="telefone" placeholder="Tel/WhatsApp *" onkeypress="MascaraTelefone(form.telefone)" maxlength="15" required></div>
@@ -90,6 +90,7 @@ $produtos = listaProdutos($blowpet);
             <textarea type="text" name="mensagem" id="" cols="30" rows="6" placeholder="Conte-nos sobre seu projeto *"></textarea>
             <label for="">Anexar arquivo do projeto (.doc ou .pdf)</label><br><hr>
             <input type="file" name="arquivo">
+            <input type="hidden" name="pagina" value="blowpet-projeto-personalizado.php">
             <button style="margin-left: 0;" name="btn-projeto-personalizado">Enviar</button>
             <p style="font-weight: 200; font-size:0.9em;">* campos obrigatórios</p>
           </form>

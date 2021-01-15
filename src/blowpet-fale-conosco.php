@@ -83,9 +83,9 @@ $produtos = listaProdutos($blowpet);
           <h2 style="padding-top:60px">ENTRE EM CONTATO</h2><br>
           <p>Envie sua mensagem que retornaremos o mais breve.<br>Tem um projeto? Fale mais detalhes que podemos lhe ajudar.</p>
         </div>
-        <div class="grid_6">
+        <div class="grid_6" id="contato">
           <form action="phpmailer/enviar.php" method="post" name="form" class="form-contato">
-
+          <?php require_once "alerta.php"?>
             <div class="grid_55"><input type="text" name="nome" placeholder="Nome *"required></div>
             <div class="grid_55"><input type="email" name="email" placeholder="Email *" required></div>
             <div class="grid_55"><input type="text" name="telefone" placeholder="Tel/WhatsApp *" onkeypress="MascaraTelefone(form.telefone)" maxlength="15" required></div>
