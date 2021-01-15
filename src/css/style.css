@@ -1241,18 +1241,22 @@ width: 100%;
 
   .slideshow-container{
     position: relative;
-    margin-top: 10px;
+    margin-top: -20px;
   }
   
   .prev, .next{
     position: absolute;
     top: 60px;
-    height: 10%;
+    background-color: rgba(0, 0, 0, 0.15);
   }
 
   .numbertext{
     position: absolute;
-    top: 110px;
+    top: 135px;
+    padding: 4px 4px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 12%;
   }
 
   .imgtext{
