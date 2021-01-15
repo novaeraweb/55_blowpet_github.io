@@ -92,7 +92,7 @@ $preformas = listaPreformas($blowpet);
   </div>
   <div class="container" id="contato">
           <form action="phpmailer/enviar.php" method="post" name="form" class="form-contato">
-          <?php require_once "alerta.php"?>
+          <?php require_once "alerta-confirma.php"?>
               <h3>Solicite um Orçamento para Rotulagem</h3><br>
             <div class="grid_55"><input type="text" name="nome" placeholder="Nome *"required></div>
             <div class="grid_55"><input type="text" name="email" placeholder="Email *" required></div>

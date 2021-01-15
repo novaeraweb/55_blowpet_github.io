@@ -83,7 +83,7 @@ $produtos = listaProdutos($blowpet);
         </div>
         <div class="grid_6" id="contato">
           <form action="phpmailer/enviar.php" method="post" enctype="multipart/form-data" name="form" class="form-contato">
-          <?php require_once "alerta.php"?>
+          <?php require_once "alerta-confirma.php"?>
             <div class="grid_55"><input type="text" name="nome" placeholder="Nome *"required></div>
             <div class="grid_55"><input type="text" name="email" placeholder="Email *" required></div>
             <div class="grid_55"><input type="text" name="telefone" placeholder="Tel/WhatsApp *" onkeypress="MascaraTelefone(form.telefone)" maxlength="15" required></div>

@@ -69,7 +69,7 @@
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 <?php require "header.php" ?>
-<div class="grid_10">
+<div class="grid_10"><?php require_once "alerta.php"?>
   <div class="slideshow-container">
       <div class="mySlides fade">
         <div class="imgtext">
@@ -180,7 +180,7 @@
         </div>
         <div class="grid_6" id="contato">        
           <form action="phpmailer/enviar.php" method="post" name="form" class="form-contato">
-          <?php require_once "alerta.php"?>
+          <?php require_once "alerta-confirma.php"?>
               <p>Fale Conosco</p>
             <div class="grid_55"><input type="text" name="nome" placeholder="Nome *"required></div>
             <div class="grid_55"><input type="email" name="email" placeholder="Email *" required></div>

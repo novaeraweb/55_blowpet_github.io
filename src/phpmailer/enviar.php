@@ -116,7 +116,7 @@ if(isset($recaptcha_response)){
       // Define os destinatário(s)
       // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       //$mail->AddAddress($email);
-      $mail->AddAddress('pcp@blowpet.com.br', 'BlowPet'); // Copia
+      // $mail->AddAddress('pcp@blowpet.com.br', 'BlowPet'); // Copia
       $mail->AddBCC('contato@novaeraweb.com.br', 'BlowPet'); // Cópia Oculta
       }
 
@@ -124,7 +124,7 @@ if(isset($recaptcha_response)){
       // Define os destinatário(s)
       // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       //$mail->AddAddress($email);
-      $mail->AddAddress('rh@blowpet.com.br', 'BlowPet'); // Copia
+      // $mail->AddAddress('rh@blowpet.com.br', 'BlowPet'); // Copia
       $mail->AddBCC('contato@novaeraweb.com.br', 'BlowPet'); // Cópia Oculta
       }
 
