@@ -518,6 +518,7 @@ ul.menu ul, .menu li:hover > ul.submenu-1{ display:block; position:relative; flo
 	
 }
 
+
 /**** Conteúdo ****/
 
 a {	text-decoration: none; }
@@ -1175,14 +1176,57 @@ width: 100%;
 }
 
 
-
-
-
+@media only screen and (max-width:768px){
+  /*Configuração do nivel responsivo*/
+  .topo strong{ display:block; background:#515a85; float:left;color: #fefefe; padding:15px 15px 14px; font-family: 'asenineregular'; font-size:16px; margin:0px 0 0 15px; }
+  
+  ul.menu{ width:298px;height:auto; border-radius:0; padding:0; position:absolute; top:-106px; left:-300px; margin-left: 0;}	
+  
+  .menu li{ width:100%; border-bottom: 1px solid;}	
+  .menu li a{ width:100%; box-sizing:border-box; -webkit-box-sizing:border-box; border-radius:0;}
+  .menu li:hover > a{ background:none;}
+  
+  ul.menu ul, .menu li:hover > ul.submenu-1{ display:block; position:relative; float:left; top:auto; left:auto; box-shadow:none; width:100%; padding:0;  box-sizing:border-box; -webkit-box-sizing:border-box; background:none; padding:0 0 20px 20px; }
+  
+  .menu ul.submenu-1 li{ border:none;font-size: 1em; width:80%; margin-left: 50px;}
+  .menu ul.submenu-1 a{width:100%; border-left:1px solid #000; border-radius:0;}
+  
+  .menu ul.submenu-2 li {
+      width:100%; 
+      font-size: 1.1em;
+  }
+  
+  /*--Botão do Menu--*/
+  .topo i{cursor:pointer; display:block; width:20px; height:48px; float:left; padding:0 20px; margin-left: 15px; position: relative; margin-top: -106px; z-index: 999999;}
+  .topo i b{margin-top: 20px;}
+  .topo i b, .topo i b:before, .topo i b:after{cursor:pointer; height:4px; width:20px; position: absolute; display: block; content: '';  -webkit-transition: all 500ms cubic-bezier(0.615, 0.25, 0.505, 1.47); transition: all 500ms cubic-bezier(0.615, 0.25, 0.505, 1.47);}
+  .topo i b:before{ top: -6px;}
+  .topo i b:after{bottom: -6px;}
+   
+   /*Configuração do botão do menu ativo*/
+  .menu-on .topo i b{background-color: transparent;}
+  .menu-on .topo i b:before, .menu-on .topo i b:after{top: 0;}
+  .menu-on .topo i b:before{ -webkit-transform: rotate(45deg) scale(1.2); -ms-transform: rotate(45deg) scale(1.2); transform: rotate(45deg) scale(1.2);}
+  .menu-on .topo i b:after{-webkit-transform: rotate(-45deg) scale(1.2); -ms-transform: rotate(-45deg) scale(1.2); transform: rotate(-45deg) scale(1.2);}
+  
+  
+  /*========= Configuração de Cores ==============================*/
+  /*Configura de cores do menu responsivo*/
+  .menu{background:#515a85; z-index: 9999;}
+  .menu li{border-color: #000; background:#DB0304;}
+  .menu li a, .menu li:hover > a{ color:#efefef;}
+  .menu ul.submenu-1 a{ border-color: #000; color:#fefefe}
+  
+  /*Cor do botão do menu*/
+  .topo i{background:#DB0304;}
+  .topo i b, .topo i b:before, .topo i b:after{ background:#fefefe;}
+    
+  }
 
 
 @media screen and (max-width: 768px) and (min-width: 640px) {
 
-	.notablet { display: none; }
+  .notablet { display: none; }
 	header .grid_1 { width: 15%; margin: 5% 5% 5% 17.5%!important; }
 	header .grid_3 { width: 45%; margin: 6% 17.5% 5% 0!important; }
 	.logo { margin: 0; }
@@ -1192,7 +1236,77 @@ width: 100%;
 	h3 { font-size: 1.5em; }
 	.highlight .grid_7 { width: 100%; margin-right: 0; }
 
+  header {padding-bottom: 0%;}
+
+  .logo img{
+    position: relative;
+    margin-left: 200px;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .botao4{
+    width: 30%;
+  }
+  
+
+  .slideshow-container{
+    position: relative;
+    height: 60%;
+    margin-top: -60px;
+  }
+  
+  .prev, .next{
+    position: absolute;
+    top: 180px;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .numbertext{
+    position: absolute;
+    top: 300px;
+    padding: 0px 8px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 10%;
+  }
+
+  .imgtext{ 
+    overflow: hidden;
+  }
+
+  .chamada p{
+    font-size: 0.8em;
+  }
+
+  .garrafa-pet{
+    background: url(../images/garrafas-pet-blowpet.png) no-repeat;
+    background-size: auto;
+    background-position: right bottom;
+    height: 100%;
+  }
+
+  /* .garrafa-pet button{
+    position:relative;
+    top: 60px;
+  } */
+
+  .grid_4 p > a{
+    font-size: 0.85em;
+  }
+
+  .garrafas{
+    height: 330px;
+  }
 }
+
+@media screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape){
+  
+  ul.menu{margin-left: -25px;}
+  
+  .menu li a{font-size: 0.8em;}
+}
+
 
 @media screen and (max-width: 640px) {
 
